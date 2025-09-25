@@ -1,0 +1,97 @@
+/* Styles globaux */
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff7eb;
+  color: #333;
+  padding: 20px;
+  width: 320px;
+}
+h3 {
+  margin-bottom: 15px;
+  color: #f7931e;
+  text-align: center;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+input[type="number"],
+input[type="date"],
+input[list] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+button {
+  background-color: #f7931e;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px; /* Ajouté pour espacer le bouton du champ */
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #e07816;
+}
+.card {
+  display: none;
+}
+.card.active {
+  display: block;
+}
+.card.active input[type="date"] {
+  background-color: #fdf6e4; /* Ajout d'une couleur douce */
+  color: #333;
+  border: 1px solid #f7931e;
+}
+.card.active button {
+  background-color: #f7931e;
+}
+#results {
+  margin-top: 15px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+#results a {
+  color: #0066cc;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 5px;
+  word-break: break-all;
+}
+.footer-text {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: center;
+  color: #666;
+}
+/* Loader Styles */
+.loader {
+  display: none; /* Masqué par défaut */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Assure que le loader est au-dessus des autres éléments */
+}
+.loader img {
+  width: 50px; /* Ajustez la taille selon vos besoins */
+  height: 50px;
+}

@@ -1,0 +1,25 @@
+# Fichiers système macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Dossier créé par les archives ZIP sur Mac
+__MACOSX/
+
+# Thumbs et caches
+._*
+.Spotlight-V100
+.Trashes
+
+# Logs
+*.log
+
+# Node (au cas où tu ajoutes du JS build plus tard)
+node_modules/
+dist/
+
+# Autres fichiers temporaires
+*.swp
+*.swo
+*.tmp
+

@@ -1,0 +1,49 @@
+<!-- view/popup.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Filtrage Licitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h3>Filtrage Licitor</h3>
+
+  <!-- Étape 1 : Limite par Date -->
+  <div class="card active" id="card-1">
+    <label for="dateLimit">Date limite :</label>
+    <input type="date" id="dateLimit" required>
+    <button id="searchBtn">Chercher</button>
+  </div>
+
+  <!-- Étape 2 : Filtrage par Prix et Commune -->
+  <div class="card" id="card-2">
+    <label for="priceInput">Prix maximum (€) :</label>
+    <input type="number" id="priceInput" placeholder="Ex: 150000" min="0">
+
+    <label for="communeInput">Commune :</label>
+    <input list="communeList" id="communeInput" placeholder="Tapez ou choisissez une commune...">
+    <datalist id="communeList"></datalist>
+
+    <button id="filterBtn">Filtrer</button>
+  </div>
+
+  <!-- Étape 3 : Affichage des Résultats -->
+  <div class="card" id="card-3">
+    <p id="result-count">Nombre d'annonces trouvées : 0</p>
+    <p>Résultats :</p>
+    <div id="results"></div>
+    <button id="restartBtn">Nouvelle Recherche</button>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <img src="../assets/spinner.gif" alt="Chargement...">
+  </div>
+
+  <div class="footer-text">Data Filtration</div>
+
+  <!-- Scripts -->
+  <script type="module" src="../controller/controller.js"></script>
+</body>
+</html>
